@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/clicable_roundCell"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/image_round_cell"
+            android:orientation="horizontal"
+            android:weightSum="9"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="74dp"
+                android:layout_weight="4" />
+
+            <TextView
+                android:id="@+id/display_main_score"
+                style="@style/MainText"
+                android:layout_width="110dp"
+                android:layout_height="74dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/new_rocker"
+                android:text="@string/empty_score"
+                android:textColor="#9FA8DA"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="74dp"
+                android:layout_weight="4" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
